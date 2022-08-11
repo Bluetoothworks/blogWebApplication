@@ -386,11 +386,11 @@ body {
     width:100vw;
     height:50vh;
     margin-top: 70vh;
-    border:2px solid black;
     font-family: inherit;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
+    
     .post-part{
         width:50%;
         height:100%;
@@ -432,5 +432,108 @@ body {
     }
 }
 
+@media only screen and (max-width: 940px) {
+    .post {
+      height:100vh;
+      border: 2px solid black;
+      .post-part{
+        height: 50vh;
+        width:100vw;
+      }
+    }
+    .posts{
+        margin-top: 170vh !important;
+    }
+    .footer{
+        margin-top: 378vh !important;
+    }
+  }
 
+.posts{
+    position: absolute;
+    margin-top: 120vh;
+    background-image: url(/ocean.jpg);
+    width: 100%;
+}
+
+
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    margin-top: 250vh;
+    background-image: url(/ocean.jpg);
+
+}
+
+@media only screen and (max-width: 1200px){
+    .footer{
+        margin-top: 278vh !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    .footer{
+        margin-top: 433vh!important;
+    }
+}
+.me {
+    display: block;
+    margin: 2em auto;
+    margin-bottom: 3em;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+  }
   
+  .social {
+    text-align: center;
+    font-size: 2.5em;
+    color: #555;
+    overflow: hidden;
+  
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    i {
+      margin: .3em;
+      cursor: pointer;
+      transition: color 300ms ease, margin-top 300ms ease;
+      transform: translateZ(0);
+      
+      &:hover {
+        margin-top: -1px;
+      }
+      
+      &#twitter:hover {
+        color: #77DDF6;
+      }
+  
+      &#github:hover {
+        color: black;
+      }
+  
+      &#linkedin:hover {
+        color: #0177B5;
+      }
+  
+      &#code:hover {
+        color: #29A329;
+      }
+  
+      &#stack:hover {
+        color: #ED780E;
+      }
+  
+      &#plus:hover {
+        color: #D43402;
+      }
+  
+      &#mail:hover {
+        color: #F7B401;
+      }
+    }
+  }

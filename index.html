@@ -20,6 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
 </head>
 
 <body>
@@ -28,64 +32,84 @@
 
     <header class="header" id="head">
         <nav class="navbar">
-          <a class="brand" href="#head" style="text-decoration: none;">BlogArc</a>
-          <input type="checkbox" id="nav" class="hidden">
-          <label for="nav" class="nav-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-           </label>
-          <div class="wrapper">
-            <ul class="menu">
-              <li class="menu-item"><a href="#publish" style="text-decoration: none;">Publish</a></li>
-              <li class="menu-item"><a href="#Feed" style="text-decoration: none;">Blog Feed</a></li>
-              <li class="menu-item">
-                <button class="custom-btn login" id="log-but" onclick="logfun()">Login</button>
-              </li>
-            </ul>
-          </div>
+            <a class="brand" href="#head" style="text-decoration: none;">BlogArc</a>
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="wrapper">
+                <ul class="menu">
+                    <li class="menu-item"><a href="#post" style="text-decoration: none;">Publish</a></li>
+                    <li class="menu-item"><a href="#Feed" style="text-decoration: none;">Blog Feed</a></li>
+                    <li class="menu-item">
+                        <button class="custom-btn login" id="log-but" onclick="logfun()">Login</button>
+                    </li>
+                </ul>
+            </div>
         </nav>
-      </header>
+    </header>
 
-     <section id="log-in">
-        
+    <section id="log-in">
+
 
         <div class="login-form">
             <form>
-              <h1>Login</h1>
-              <div class="icon" onclick="buttonfun()" >X</div>
-              <div class="content">
-                <div class="input-field">
-                  <input type="email" placeholder="Email" autocomplete="nope">
+                <h1>Login</h1>
+                <div class="icon" onclick="buttonfun()">X</div>
+                <div class="content">
+                    <div class="input-field">
+                        <input type="email" placeholder="Email" autocomplete="nope">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" autocomplete="new-password">
+                    </div>
+                    <a href="#" class="link">Forgot Your Password?</a>
                 </div>
-                <div class="input-field">
-                  <input type="password" placeholder="Password" autocomplete="new-password">
+                <div class="action">
+                    <button>Register</button>
+                    <button>Sign in</button>
                 </div>
-                <a href="#" class="link">Forgot Your Password?</a>
-              </div>
-              <div class="action">
-                <button>Register</button>
-                <button>Sign in</button>
-              </div>
             </form>
-          </div>
-     </section>
+        </div>
+    </section>
 
-     <section id="post" class ="post">
+    <section id="post" class="post">
         <div class="post-part part1">
             <h1>WRITE YOUR FIRST BLOG</h1>
         </div>
         <div class="post-part part2">
             <form class="form1">
-                <input class="in" type="text" placeholder="name">
-                <input class="in" type="text" placeholder="email">
+                <input class="in" type="text" placeholder="Name">
+                <input class="in" type="text" placeholder="Email">
                 <textarea class="in" name="" id="" cols="30" rows="10" placeholder="Start writing your blog"></textarea>
                 <button class="sub in">SUBMIT</button>
             </form>
         </div>
-     </section>
+    </section>
 
+    <section class="posts" id="Feed">
+        <div class="container" style="margin-top :8rem;">
+            <h2 style="color: white;text-align:center; margin-bottom : 20px ; color: #90292ee0; font-weight: bold;">Blog
+                Feed</h2>
+            <div id="mycontainer" style="display:flex; flex-wrap:wrap; margin:10px; justify-content:space-around">
+            </div>
+        </div>
+        <div id="pagination" class="tui-pagination">
 
+        </div>
+    </section>
+
+    <section class="footer">
+        <img class="me" src="https://i.postimg.cc/wvHDB0FJ/me.jpg" alt="" />
+
+        <div class="social">
+            <a href="https://twitter.com/bphillips201"><i id="twitter" class="icon-twitter"></i></a>
+            <i id="github" class="fab fa-github"></i>
+            <i id="linkedin" class="fab fa-linkedin"></i>
+        </div>
+    </section>
 
 
     <script src="script.js" async defer></script>
