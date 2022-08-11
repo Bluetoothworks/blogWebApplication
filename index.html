@@ -19,15 +19,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
 
 
 
-    <header class="header">
+    <header class="header" id="head">
         <nav class="navbar">
-          <a class="brand" href="#" style="text-decoration: none;">BlogArc</a>
+          <a class="brand" href="#head" style="text-decoration: none;">BlogArc</a>
           <input type="checkbox" id="nav" class="hidden">
           <label for="nav" class="nav-toggle">
               <span></span>
@@ -36,12 +37,40 @@
            </label>
           <div class="wrapper">
             <ul class="menu">
-              <li class="menu-item"><a href="#" style="text-decoration: none;">Post</a></li>
-              <li class="menu-item"><a href="#" style="text-decoration: none;">Blog Feed</a></li>
+              <li class="menu-item"><a href="#publish" style="text-decoration: none;">Publish</a></li>
+              <li class="menu-item"><a href="#Feed" style="text-decoration: none;">Blog Feed</a></li>
+              <li class="menu-item">
+                <button class="custom-btn login" id="log-but" onclick="logfun()">Login</button>
+              </li>
             </ul>
           </div>
         </nav>
       </header>
+
+     <section id="log-in">
+        
+
+        <div class="login-form">
+            <form>
+              <h1>Login</h1>
+              <div class="icon" onclick="buttonfun()" >X</div>
+              <div class="content">
+                <div class="input-field">
+                  <input type="email" placeholder="Email" autocomplete="nope">
+                </div>
+                <div class="input-field">
+                  <input type="password" placeholder="Password" autocomplete="new-password">
+                </div>
+                <a href="#" class="link">Forgot Your Password?</a>
+              </div>
+              <div class="action">
+                <button>Register</button>
+                <button>Sign in</button>
+              </div>
+            </form>
+          </div>
+     </section>
+
 
 
 
