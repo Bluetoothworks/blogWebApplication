@@ -21,7 +21,8 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: $color-black;
-  background: $color-white;
+  background-image: url(/ocean.jpg);
+
 }
 
 .hidden {
@@ -461,7 +462,7 @@ body {
     position: absolute;
     width: 100%;
     height: 40%;
-    margin-top: 250vh;
+    margin-top: 265vh;
     background-image: url(/ocean.jpg);
 
 }
@@ -536,4 +537,8 @@ body {
         color: #F7B401;
       }
     }
+  }
+
+  #feed{
+    z-index:30;
   }
